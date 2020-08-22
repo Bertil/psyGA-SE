@@ -1,12 +1,10 @@
 ---
 ID: 34
 post_title: static test
-post_name: static-test
 author: admin
-post_date: 2020-07-14 17:02:28
+post_excerpt: ""
 layout: page
-link: http://psyga-se.de/static-test/
+permalink: http://psyga-se.de/static-test/
 published: true
-tags: [ ]
-categories: [ ]
+post_date: 2020-07-14 17:02:28
 ---

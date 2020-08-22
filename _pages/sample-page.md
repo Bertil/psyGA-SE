@@ -1,14 +1,12 @@
 ---
 ID: 2
 post_title: Sample Page
-post_name: sample-page
 author: admin
-post_date: 2020-07-09 10:54:05
+post_excerpt: ""
 layout: page
-link: http://psyga-se.de/sample-page/
+permalink: http://psyga-se.de/sample-page/
 published: true
-tags: [ ]
-categories: [ ]
+post_date: 2020-07-09 10:54:05
 ---
 <!-- wp:paragraph -->
 <p>This is an example page. It's different from a blog post because it will stay in one place and will show up in your site navigation (in most themes). Most people start with an About page that introduces them to potential site visitors. It might say something like this:</p>

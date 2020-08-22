@@ -1,14 +1,12 @@
 ---
 ID: 45
 post_title: poc test
-post_name: testcode
 author: admin
-post_date: 2020-07-21 13:23:42
+post_excerpt: ""
 layout: page
-link: http://psyga-se.de/testcode/
+permalink: http://psyga-se.de/testcode/
 published: true
-tags: [ ]
-categories: [ ]
+post_date: 2020-07-21 13:23:42
 ---
 <title>psyGA Selbsteinschätzung</title>
 <!-- Required meta tags -->
