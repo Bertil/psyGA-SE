@@ -100,6 +100,10 @@ h1 {<br />
 <div class="custom-control custom-radio">
                                             <input type="radio" class="custom-control-input" id="defaultInline3" name="inlineDefaultRadiosExample">
 <label class="custom-control-label" for="defaultInline3">3</label></div>
+<!-- Default 4-->
+<div class="custom-control custom-radio">
+<input type="radio" class="custom-control-input" id="defaultInline4" name="inlineDefaultRadiosExample">
+<label class="custom-control-label" for="defaultInline4">4</label></div>
 </div>
 </div>
 <div class="item">
