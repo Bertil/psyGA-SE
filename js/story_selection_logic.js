@@ -1,14 +1,7 @@
-'use strict';
 
-console.log('Here\'s a hidden message');
-
-let today = new Date();
-let formatDate = today.toDateString();
-let selectElement = document.getElementById('date');
-selectElement.innerHTML = formatDate;
 
 let check = function(logic_function, postive_action, negative_action){
-    return (answers) => {logic_function(answers, postive_action, negative_action);}
+    return (answers) => { return logic_function(answers, postive_action, negative_action)};
 }
  let return_id = function(id){
      return (answers) => id;
@@ -16,198 +9,198 @@ let check = function(logic_function, postive_action, negative_action){
 
 let sleep = function(answers,postive_action, negative_action){
     if(answers.includes("sleep_yes")){
-        postive_action(answers);
+        return postive_action(answers);
     } else {
-        negative_action(answers);
+        return negative_action(answers);
     }
 }
 
 let sick_relative= function(answers,postive_action, negative_action){
     if(answers.includes("relative_yes")){
-        postive_action(answers);
+        return postive_action(answers);
     } else {
-        negative_action(answers);
+        return negative_action(answers);
     }
 }
 
 let derpessiv = function(answers,postive_action, negative_action){
     if(answers.includes("depression")){
-        postive_action(answers);
+        return postive_action(answers);
     } else {
-        negative_action(answers);
+        return negative_action(answers);
     }
 }
 
 let subjective_stress = function(answers,postive_action, negative_action){
     if(answers.includes("stress")){
-        postive_action(answers);
+        return postive_action(answers);
     } else {
-        negative_action(answers);
+        return negative_action(answers);
     }
 }
 
 let lack_of_motivation = function(answers,postive_action, negative_action){
-    if(answers.includes("")){
-        postive_action(answers);
+    if(answers.includes("motivation")){
+        return postive_action(answers);
     } else {
-        negative_action(answers);
+        return negative_action(answers);
     }
 }
 
 let short_breath = function(answers,postive_action, negative_action){
     if(answers.includes("breathing")){
-        postive_action(answers);
+        return postive_action(answers);
     } else {
-        negative_action(answers);
+        return negative_action(answers);
     }
 }
 
-let work = function(answers,postive_action, negative_action){
-    if(answers.includes("work_overload")){
-        postive_action(answers);
+let stress_colleague = function(answers,postive_action, negative_action){
+    if(answers.includes("stress_colleague")){
+        return postive_action(answers);
     } else {
-        negative_action(answers);
+        return negative_action(answers);
     }
 }
 
 let sense_of_fairness = function(answers,postive_action, negative_action){
     if(answers.includes("fairness")){
-        postive_action(answers);
+        return postive_action(answers);
     } else {
-        negative_action(answers);
+        return negative_action(answers);
     }
 }
 
 let exhaustion = function(answers,postive_action, negative_action){
     if(answers.includes("phys_exhaustion")){
-        postive_action(answers);
+        return postive_action(answers);
     } else {
-        negative_action(answers);
+        return negative_action(answers);
     }
 }
 
 let emotional_exhaustion = function(answers,postive_action, negative_action){
     if(answers.includes("psy_exhaustion")){
-        postive_action(answers);
+        return postive_action(answers);
     } else {
-        negative_action(answers);
+        return negative_action(answers);
     }
 }
 
 let stigma = function(answers,postive_action, negative_action){
     if(answers.includes("stigma_yes")){
-        postive_action(answers);
+        return postive_action(answers);
     } else {
-        negative_action(answers);
+        return negative_action(answers);
     }
 }
 
 let case_manager = function(answers,postive_action, negative_action){
     if(answers.includes("medical_alone_yes")){
-        postive_action(answers);
+        return postive_action(answers);
     } else {
-        negative_action(answers);
+        return negative_action(answers);
     }
 }
 
 let finacial_worries = function(answers,postive_action, negative_action){
     if(answers.includes("financial_worries")){
-        postive_action(answers);
+        return postive_action(answers);
     } else {
-        negative_action(answers);
+        return negative_action(answers);
     }
 }
 
 let loss_of_appetit = function(answers,postive_action, negative_action){
     if(answers.includes("loss_apetite")){
-        postive_action(answers);
+        return postive_action(answers);
     } else {
-        negative_action(answers);
+        return negative_action(answers);
     }
 }
 
 let loneliness = function(answers,postive_action, negative_action){
     if(answers.includes("alone")){
-        postive_action(answers);
+        return postive_action(answers);
     } else {
-        negative_action(answers);
+        return negative_action(answers);
     }
 }
 
 let problem_with_management = function(answers,postive_action, negative_action){
     if(answers.includes("stress_manager")){
-        postive_action(answers);
+        return postive_action(answers);
     } else {
-        negative_action(answers);
+        return negative_action(answers);
     }
 }
 
 let change_of_work_responsibility = function(answers,postive_action, negative_action){
     if(answers.includes("work_change")){
-        postive_action(answers);
+        return postive_action(answers);
     } else {
-        negative_action(answers);
+        return negative_action(answers);
     }
 }
 
 let suicidal_thoughts = function(answers,postive_action, negative_action){
     if(answers.includes("deaththoughts_yes")){
-        postive_action(answers);
+        return postive_action(answers);
     } else {
-        negative_action(answers);
+        return negative_action(answers);
     }
 }
 
 let ponder = function(answers,postive_action, negative_action){
-    if(answers.includes("")){
-        postive_action(answers);
+    if(answers.includes("ponder")){
+        return postive_action(answers);
     } else {
-        negative_action(answers);
+        return negative_action(answers);
     }
 }
 
 let professional_activity = function(answers,postive_action, negative_action){
     if(answers.includes("work_overload")){
-        postive_action(answers);
+        return postive_action(answers);
     } else {
-        negative_action(answers);
+        return negative_action(answers);
     }
 }
 
 let low_selfesteem = function(answers,postive_action, negative_action){
     if(answers.includes("self_asurness")){
-        postive_action(answers);
+        return postive_action(answers);
     } else {
-        negative_action(answers);
+        return negative_action(answers);
     }
 }
 
 let career_entry = function(answers,postive_action, negative_action){
-    if(answers.includes("")){
-        postive_action(answers);
+    if(answers.includes("work_entry")){
+        return postive_action(answers);
     } else {
-        negative_action(answers);
+        return negative_action(answers);
     }
 }
 
 let need_to_conform = function(answers,postive_action, negative_action){
     if(answers.includes("please_everybody")){
-        postive_action(answers);
+        return postive_action(answers);
     } else {
-        negative_action(answers);
+        return negative_action(answers);
     }
 }
 
 let ambition = function(answers,postive_action, negative_action){
     if(answers.includes("ambitious")){
-        postive_action(answers);
+        return postive_action(answers);
     } else {
-        negative_action(answers);
+        return negative_action(answers);
     }
 }
 
 
-let find_story_id = check(
+var find_story_id = check(
     sleep,
     check(
         sick_relative,
@@ -221,7 +214,7 @@ let find_story_id = check(
                     return_id("id_32")
                 ),
                 check(
-                    work,
+                    stress_colleague,
                     return_id("id_39"),
                     return_id("id_13")
                 )
@@ -281,16 +274,16 @@ let find_story_id = check(
                 loneliness,
                 check(
                     stigma,
-                    return_id(),
-                    return_id()
+                    return_id("id_50"),
+                    return_id("id_33")
                 ),
                 check(
-                    work,
-                    return_id(),
+                    stress_colleague,
+                    return_id("id_43"),
                     check(
                         career_entry,
-                        return_id(),
-                        return_id()
+                        return_id("id_22"),
+                        return_id("id_11")
                     )
                 )
             ),
@@ -298,20 +291,20 @@ let find_story_id = check(
                 finacial_worries,
                 check(
                     need_to_conform,
-                    return_id(),
+                    return_id("id_20"),
                     check(
                         derpessiv,
-                        return_id(),
-                        return_id()
+                        return_id("id_23"),
+                        return_id("id_14")
                     )
                 ),
                 check(
                     change_of_work_responsibility,
-                    return_id(),
+                    return_id("id_27"),
                     check(
                         case_manager,
-                        return_id(),
-                        return_id()
+                        return_id("id_44"),
+                        return_id("id_15")
                     )
                 )
             )
@@ -322,16 +315,16 @@ let find_story_id = check(
                 ambition,
                 check(
                     professional_activity,
-                    return_id(),
-                    return_id()
+                    return_id("id_12"),
+                    return_id("id_46")
                 ),
                 check(
                     derpessiv,
-                    return_id(),
+                    return_id("id_48"),
                     check(
                         emotional_exhaustion,
-                        return_id(),
-                        return_id()
+                        return_id("id_51"),
+                        return_id("id_28")
                     )
                 )
             ),
@@ -339,24 +332,24 @@ let find_story_id = check(
                 loss_of_appetit,
                 check(
                     change_of_work_responsibility,
-                    return_id(),
+                    return_id("id_42"),
                     check(
                         problem_with_management,
-                        return_id(),
-                        return_id(),
+                        return_id("id_17"),
+                        return_id("id_16"),
                     )
                 ),
                 check(
                     derpessiv,
                     check(
                         loneliness,
-                        return_id(),
-                        return_id()
+                        return_id("id_49"),
+                        return_id("id_19")
                     ),
                     check(
                         change_of_work_responsibility,
-                        return_id(),
-                        return_id()
+                        return_id("id_10"),
+                        return_id("id_40")
                     )
                 )
             )
