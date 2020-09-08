@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="psyga1.css">
         <link rel="stylesheet" href="psyga2.css">
     -->
+    <script src="js/story_selection_logic.js"></script>
     <style>
         #messages > details {
     background-color: #587991 !important;
@@ -125,46 +126,56 @@ h1 {
                                     <div class="question">
                                         <p> 3. Welche der folgenden Beschwerden sind im letzten halben Jahr regelmäßig bei Ihnen aufgetreten?</p>
                                     </div>
-                                        <div class="answers">
-                                            <!-- Default unchecked -->
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="stress">
-                                                <label class="custom-control-label" for="stress">Stressempfinden</label>
-                                            </div>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="depression">
-                                                <label class="custom-control-label" for="depression">Depressive Phase (auch ohne ärztliche Diagnose): Sie fühlen sich z.B. 
-                                                    niedergeschlagen, antriebslos, traurig, haben das Gefühl nichts auf die Reihe zu bekommen</label>
-                                            </div>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="loss_apetite">
-                                                <label class="custom-control-label" for="loss_apetite">Appetitlosigkeit</label>
-                                            </div>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="binge">
-                                                <label class="custom-control-label" for="binge">Übermäßiger Appetit, z.B. auf Süßigkeiten</label>
-                                            </div>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="breathing">
-                                                <label class="custom-control-label" for="breathing">Atembeschwerden</label>
-                                            </div>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="phys_exhaustion">
-                                                <label class="custom-control-label" for="phys_exhaustion">Körperliche Erschöpfungszustände</label>
-                                            </div>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="psy_exhaustion">
-                                                <label class="custom-control-label" for="psy_exhaustion">Seelische Erschöpfungszustände</label>
-                                            </div>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="alone">
-                                                <label class="custom-control-label" for="alone">Einsamkeit</label>
-                                            </div>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="no_stress">
-                                                <label class="custom-control-label" for="no_stress">Nichts davon</label>
-                                            </div>
+                                    <div class="answers">
+                                        <!-- Default unchecked -->
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="stress">
+                                            <label class="custom-control-label" for="stress" onclick="$('.foo').click(function(){     
+                                                $('.foo').not(this).attr('checked', false);      
+                                            });">Stressempfinden</label>
                                         </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="depression">
+                                            <label class="custom-control-label" for="depression">Depressive Phase (auch ohne ärztliche Diagnose): Sie fühlen sich z.B. 
+                                                niedergeschlagen, antriebslos, traurig, haben das Gefühl nichts auf die Reihe zu bekommen</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="ponder">
+                                            <label class="custom-control-label" for="ponder">Ständiges Nachdenken und Grübeln</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="motivation">
+                                            <label class="custom-control-label" for="motivation">Antriebslosigkeit</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="loss_apetite">
+                                            <label class="custom-control-label" for="loss_apetite">Appetitlosigkeit</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="binge">
+                                            <label class="custom-control-label" for="binge">Übermäßiger Appetit, z.B. auf Süßigkeiten</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="breathing">
+                                            <label class="custom-control-label" for="breathing">Atembeschwerden</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="phys_exhaustion">
+                                            <label class="custom-control-label" for="phys_exhaustion">Körperliche Erschöpfungszustände</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="psy_exhaustion">
+                                            <label class="custom-control-label" for="psy_exhaustion">Seelische Erschöpfungszustände</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="alone">
+                                            <label class="custom-control-label" for="alone">Einsamkeit</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="no_stress">
+                                            <label class="custom-control-label" for="no_stress">Nichts davon</label>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="item">
                                     <div class="question">
@@ -188,30 +199,38 @@ h1 {
                                     <div class="question">
                                         <p> 5. Welche der folgenden Aussagen treffen auf Sie zu?</p>
                                     </div>
-                                        <div class="answers">
-                                            <!-- Default unchecked -->
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="work_overload">
-                                                <label class="custom-control-label" for="work_overload">Meine momentane berufliche Tätigkeit belastet mich sehr.</label>
-                                            </div>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="stress_manager">
-                                                <label class="custom-control-label" for="stress_manager">Das Verhältnis zu einem meiner Vorgesetzten empfinde ich als sehr belastend.</label>
-                                            </div>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="financial_worries">
-                                                <label class="custom-control-label" for="financial_worries">Ich habe finanzielle Sorgen.</label>
-                                            </div>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="work_change">
-                                                <label class="custom-control-label" for="work_change">Aufgrund meiner (Vor-)Erkrankung wurde 
-                                                    mir gegen meinen Willen ein anderer Aufgabenbereich übertragen.</label>
-                                            </div>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="no_work_stress">
-                                                <label class="custom-control-label" for="no_work_stress">Nichts davon</label>
-                                            </div>
+                                    <div class="answers">
+                                        <!-- Default unchecked -->
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="work_overload">
+                                            <label class="custom-control-label" for="work_overload">Meine momentane berufliche Tätigkeit belastet mich sehr.</label>
                                         </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="work_entry">
+                                            <label class="custom-control-label" for="work_entry">Der Einstieg in den Beruf ist mir sehr schwer gefallen.</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="stress_manager">
+                                            <label class="custom-control-label" for="stress_manager">Das Verhältnis zu einem meiner Vorgesetzten empfinde ich als sehr belastend.</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="stress_colleague">
+                                            <label class="custom-control-label" for="stress_colleague">Das Verhältnis zu einem oder mehrerer meiner Kollegen empfinde ich als sehr belastend.</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="financial_worries">
+                                            <label class="custom-control-label" for="financial_worries">Ich habe finanzielle Sorgen.</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="work_change">
+                                            <label class="custom-control-label" for="work_change">Aufgrund meiner (Vor-)Erkrankung wurde 
+                                                mir gegen meinen Willen ein anderer Aufgabenbereich übertragen.</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="no_work_stress">
+                                            <label class="custom-control-label" for="no_work_stress">Nichts davon</label>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="item">
                                     <div class="question">
@@ -305,12 +324,13 @@ h1 {
                                 </div>
                             </div>
                             <div class="row">
-                                <button id="getStory" type="button" class="btn btn-lg btn-primary" disabled 
+                                <button id="getStory" type="button" class="btn btn-lg btn-primary"  
                                 onclick="
-                                $('.nav-tabs li:eq(2) a').tab('show');
-                                $('details').removeAttr('open');
-                                var detail_id = getStory();
-                                openStory(detail_id)
+                                    let answers = $('input:checked').map(function() {
+                                        return this.id;
+                                    }).get();
+                                    let selected_story = find_story_id(answers);
+                                    alert('Deine antworten ergibt:\n' + selected_story)
                                 ">
                                     Zeig mir bitte meine Geschichte
                                 </button>
