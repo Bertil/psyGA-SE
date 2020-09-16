@@ -1,0 +1,35 @@
+#messages > details {
+    background-color: #587991 !important;
+        color: #DDDDDD !important;
+    }
+    .custom-radio { /*make radio buttuns ansers inline*/
+        display: inline-block;
+    }
+    details > details {
+        margin-left: 1em;
+        background-color: #FFF2 !important;
+    }
+    summary {
+        display: list-item;
+        cursor: pointer;
+        color: #DDD !important;
+    }
+    details > p, details > p:first-line, details > p:first-letter, details > button.active, details > button.active.focus, details > button.active:first-letter {
+        color: #DDD !important;
+    }
+    details > button, details > button:first-letter, details > button.focus, details > button.focus:first-letter :hover{
+        color: #DDD5 !important;
+    }
+    button.filter {
+        background-color: rgba(64, 88, 64, 80) !important;
+    }
+    h1 {
+        text-align: center;
+    }
+    .warning {
+        background-color: red;
+        margin: 60px;
+        height: 200px;
+        text-align: center;
+        padding: 70px;
+    }

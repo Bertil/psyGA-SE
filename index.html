@@ -1,63 +1,26 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>psyGA Selbsteinschätzung</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>psyGA Selbsteinschätzung</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- PSYGA CSS 
-        <link rel="stylesheet" href="psyga1.css">
-        <link rel="stylesheet" href="psyga2.css">
-    -->
-    <script src="js/story_selection_logic.js"></script>
-    <style>
-        #messages > details {
-    background-color: #587991 !important;
-    color: #DDDDDD !important;
-}
-.custom-radio { /*make radio buttuns ansers inline*/
-    display: inline-block;
-}
-details > details {
-    margin-left: 1em;
-    background-color: #FFF2 !important;
-}
-summary {
-    display: list-item;
-    cursor: pointer;
-    color: #DDD !important;
-}
-details > p, details > p:first-line, details > p:first-letter, details > button.active, details > button.active.focus, details > button.active:first-letter {
-    color: #DDD !important;
-}
-details > button, details > button:first-letter, details > button.focus, details > button.focus:first-letter :hover{
-    color: #DDD5 !important;
-}
-button.filter {
-    background-color: rgba(64, 88, 64, 80) !important;
-}
-h1 {
-    text-align: center;
-}
-.warning {
-    background-color: red;
-    margin: 60px;
-    height: 200px;
-    text-align: center;
-    padding: 70px;
-}
-
-    </style>
-  </head>
-  <body>
-      <div class="container-fluid">
-          <div class="container" id="banner">
+        <!-- Bootstrap CSS -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="css/custom.css">
+        <link rel="stylesheet" href="css/carousel_vertical.css">
+        <script src="js/story_selection_logic.js"></script>
+        
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="container" id="banner">
               <h1>psyGA Selbsteinschätzung</h1>
-          </div>
-          <div class="row">
+            </div>
+            <div class="row">
               <div class="col-sm-3" >
                   <!-- Nav tabs -->
                   <ul class="nav nav-tabs" role="tablist">
@@ -85,242 +48,253 @@ h1 {
                             <h1>
                                 Finde deine Geschichte
                             </h1>
-                            <div class="question-wrapper">
-                                <div class="item">
-                                    <div class="question">
-                                        <p> 1. Können Sie abends gut einschlafen und haben nachts einen guten Schlaf, ohne größere Unterbrechungen?</p>
+                            <div  id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="false">
+                                <div class="carousel-inner vertical" role="listbox">
+                                    <div class="item active">
+                                        <div class="question">
+                                            <p> 1. Können Sie abends gut einschlafen und haben nachts einen guten Schlaf, ohne größere Unterbrechungen?</p>
+                                        </div>
+                                        <div class="answers">
+                                            <div class="custom-control custom-radio ">
+                                                <input type="radio" class="custom-control-input" id="sleep_yes" name="sleep">
+                                                <label class="custom-control-label" for="sleep_yes">Ja</label>
+                                            </div>
+                                              
+                                              <!-- Default 2-->
+                                            <div class="custom-control custom-radio ">
+                                                <input type="radio" class="custom-control-input" id="sleep_no" name="sleep">
+                                                <label class="custom-control-label" for="sleep_no">Nein</label>
+                                            </div>
+                                        </div>
+        
                                     </div>
-                                    <div class="answers">
-                                        <div class="custom-control custom-radio ">
-                                            <input type="radio" class="custom-control-input" id="sleep_yes" name="sleep">
-                                            <label class="custom-control-label" for="sleep_yes">Ja</label>
+                                    <div class="item">
+                                        <div class="question">
+                                            <p> 2. Haben Sie pflegebedürftige Angehörige und sind dadurch belastet?</p>
                                         </div>
-                                          
-                                          <!-- Default 2-->
-                                        <div class="custom-control custom-radio ">
-                                            <input type="radio" class="custom-control-input" id="sleep_no" name="sleep">
-                                            <label class="custom-control-label" for="sleep_no">Nein</label>
+                                        <div class="answers">
+                                            <div class="custom-control custom-radio ">
+                                                <input type="radio" class="custom-control-input" id="relative_yes" name="relative">
+                                                <label class="custom-control-label" for="relative_yes">Ja</label>
+                                            </div>
+                                              
+                                              <!-- Default 2-->
+                                            <div class="custom-control custom-radio ">
+                                                <input type="radio" class="custom-control-input" id="relative_no" name="relative">
+                                                <label class="custom-control-label" for="relative_no">Nein</label>
+                                            </div>
                                         </div>
+                                        
                                     </div>
-    
-                                </div>
-                                <div class="item">
-                                    <div class="question">
-                                        <p> 2. Haben Sie pflegebedürftige Angehörige und sind dadurch belastet?</p>
-                                    </div>
-                                    <div class="answers">
-                                        <div class="custom-control custom-radio ">
-                                            <input type="radio" class="custom-control-input" id="relative_yes" name="relative">
-                                            <label class="custom-control-label" for="relative_yes">Ja</label>
+                                    <div class="item">
+                                        <div class="question">
+                                            <p> 3. Welche der folgenden Beschwerden sind im letzten halben Jahr regelmäßig bei Ihnen aufgetreten?</p>
                                         </div>
-                                          
-                                          <!-- Default 2-->
-                                        <div class="custom-control custom-radio ">
-                                            <input type="radio" class="custom-control-input" id="relative_no" name="relative">
-                                            <label class="custom-control-label" for="relative_no">Nein</label>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                                <div class="item">
-                                    <div class="question">
-                                        <p> 3. Welche der folgenden Beschwerden sind im letzten halben Jahr regelmäßig bei Ihnen aufgetreten?</p>
-                                    </div>
-                                    <div class="answers">
-                                        <!-- Default unchecked -->
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="stress">
-                                            <label class="custom-control-label" for="stress" onclick="$('.foo').click(function(){     
-                                                $('.foo').not(this).attr('checked', false);      
-                                            });">Stressempfinden</label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="depression">
-                                            <label class="custom-control-label" for="depression">Depressive Phase (auch ohne ärztliche Diagnose): Sie fühlen sich z.B. 
-                                                niedergeschlagen, antriebslos, traurig, haben das Gefühl nichts auf die Reihe zu bekommen</label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="ponder">
-                                            <label class="custom-control-label" for="ponder">Ständiges Nachdenken und Grübeln</label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="motivation">
-                                            <label class="custom-control-label" for="motivation">Antriebslosigkeit</label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="loss_apetite">
-                                            <label class="custom-control-label" for="loss_apetite">Appetitlosigkeit</label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="binge">
-                                            <label class="custom-control-label" for="binge">Übermäßiger Appetit, z.B. auf Süßigkeiten</label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="breathing">
-                                            <label class="custom-control-label" for="breathing">Atembeschwerden</label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="phys_exhaustion">
-                                            <label class="custom-control-label" for="phys_exhaustion">Körperliche Erschöpfungszustände</label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="psy_exhaustion">
-                                            <label class="custom-control-label" for="psy_exhaustion">Seelische Erschöpfungszustände</label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="alone">
-                                            <label class="custom-control-label" for="alone">Einsamkeit</label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="no_stress">
-                                            <label class="custom-control-label" for="no_stress">Nichts davon</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="question">
-                                        <p> 4. Hatten oder haben Sie das Gefühl von tiefer Verzweiflung in Verbindung mit Todesgedanken?</p>
-                                    </div>
-                                    <div class="answers">
-                                        <div class="custom-control custom-radio ">
-                                            <input type="radio" class="custom-control-input" id="deaththoughts_yes" name="deaththoughts">
-                                            <label class="custom-control-label" for="deaththoughts_yes">Ja</label>
-                                        </div>
-                                          
-                                          <!-- Default 2-->
-                                        <div class="custom-control custom-radio ">
-                                            <input type="radio" class="custom-control-input" id="deaththoughts_no" name="deaththoughts">
-                                            <label class="custom-control-label" for="deaththoughts_no">Nein</label>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                                <div class="item">
-                                    <div class="question">
-                                        <p> 5. Welche der folgenden Aussagen treffen auf Sie zu?</p>
-                                    </div>
-                                    <div class="answers">
-                                        <!-- Default unchecked -->
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="work_overload">
-                                            <label class="custom-control-label" for="work_overload">Meine momentane berufliche Tätigkeit belastet mich sehr.</label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="work_entry">
-                                            <label class="custom-control-label" for="work_entry">Der Einstieg in den Beruf ist mir sehr schwer gefallen.</label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="stress_manager">
-                                            <label class="custom-control-label" for="stress_manager">Das Verhältnis zu einem meiner Vorgesetzten empfinde ich als sehr belastend.</label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="stress_colleague">
-                                            <label class="custom-control-label" for="stress_colleague">Das Verhältnis zu einem oder mehrerer meiner Kollegen empfinde ich als sehr belastend.</label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="financial_worries">
-                                            <label class="custom-control-label" for="financial_worries">Ich habe finanzielle Sorgen.</label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="work_change">
-                                            <label class="custom-control-label" for="work_change">Aufgrund meiner (Vor-)Erkrankung wurde 
-                                                mir gegen meinen Willen ein anderer Aufgabenbereich übertragen.</label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="no_work_stress">
-                                            <label class="custom-control-label" for="no_work_stress">Nichts davon</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="question">
-                                        <p> 6. Haben Sie aufgrund einer seelischen Belastung oder Krise schon einmal 
-                                            Kontakt zu einem Arzt, einem Therapeuten oder einer anderen Person aus dem Gesundheitswesen gesucht?</p>
-                                    </div>
-                                    <div class="answers">
-                                        <div class="custom-control custom-radio ">
-                                            <input type="radio" class="custom-control-input" id="medical_contact_yes" name="medical_contact">
-                                            <label class="custom-control-label" for="medical_contact_yes">Ja</label>
-                                        </div>
-                                          
-                                          <!-- Default 2-->
-                                        <div class="custom-control custom-radio ">
-                                            <input type="radio" class="custom-control-input" id="medical_contact_no" name="medical_contact">
-                                            <label class="custom-control-label" for="medical_contact_no">Nein</label>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                                <div class="item">
-                                    <div class="question">
-                                        <p> 6 a) Haben Sie das Gefühl, sich um alles selbst kümmern zu müssen, 
-                                            wenn es darum geht, für Ihre seelische Gesundheit eine angemessene 
-                                            Unterstützung, Behandlung, Begleitung, Förderung oder Versorgung zu erhalten?</p>
-                                    </div>
-                                    <div class="answers">
-                                        <div class="custom-control custom-radio ">
-                                            <input type="radio" class="custom-control-input" id="medical_alone_yes" name="medical_alone">
-                                            <label class="custom-control-label" for="medical_alone_yes">Ja</label>
-                                        </div>
-                                          
-                                          <!-- Default 2-->
-                                        <div class="custom-control custom-radio ">
-                                            <input type="radio" class="custom-control-input" id="medical_alone_no" name="medical_alone">
-                                            <label class="custom-control-label" for="medical_alone_no">Nein</label>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                                <div class="item">
-                                    <div class="question">
-                                        <p> 7. Fürchten Sie sich davor, aufgrund Ihrer Empfindungen oder 
-                                            aufgrund Ihrer Erkrankung von Menschen in Ihrem beruflichen oder privaten Umfeld abgestempelt zu werden? </p>
-                                    </div>
-                                    <div class="answers">
-                                        <div class="custom-control custom-radio ">
-                                            <input type="radio" class="custom-control-input" id="stigma_yes" name="stigma">
-                                            <label class="custom-control-label" for="stigma_yes">Ja</label>
-                                        </div>
-                                          
-                                          <!-- Default 2-->
-                                        <div class="custom-control custom-radio ">
-                                            <input type="radio" class="custom-control-input" id="stigma_no" name="stigma">
-                                            <label class="custom-control-label" for="stigma_no">Nein</label>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                                <div class="item">
-                                    <div class="question">
-                                        <p> 8. Welche der folgenden Aussagen treffen auf Sie zu?</p>
-                                    </div>
                                         <div class="answers">
                                             <!-- Default unchecked -->
                                             <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="fairness">
-                                                <label class="custom-control-label" for="fairness">Ich habe einen ausgeprägten Gerechtigkeitssinn.</label>
+                                                <input type="checkbox" class="custom-control-input" id="stress">
+                                                <label class="custom-control-label" for="stress" onclick="$('.foo').click(function(){     
+                                                    $('.foo').not(this).attr('checked', false);      
+                                                });">Stressempfinden</label>
                                             </div>
                                             <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="selfesteem">
-                                                <label class="custom-control-label" for="selfesteem">Ich habe häufig ein schlechtes Bild von mir selbst.</label>
+                                                <input type="checkbox" class="custom-control-input" id="depression">
+                                                <label class="custom-control-label" for="depression">Depressive Phase (auch ohne ärztliche Diagnose): Sie fühlen sich z.B. 
+                                                    niedergeschlagen, antriebslos, traurig, haben das Gefühl nichts auf die Reihe zu bekommen</label>
                                             </div>
                                             <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="self_asurness">
-                                                <label class="custom-control-label" for="self_asurness">Ich habe wenig Vertrauen in meine eigenen Fähigkeiten.</label>
+                                                <input type="checkbox" class="custom-control-input" id="ponder">
+                                                <label class="custom-control-label" for="ponder">Ständiges Nachdenken und Grübeln</label>
                                             </div>
                                             <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="ambitious">
-                                                <label class="custom-control-label" for="ambitious">Ich bin sehr ehrgeizig.</label>
+                                                <input type="checkbox" class="custom-control-input" id="motivation">
+                                                <label class="custom-control-label" for="motivation">Antriebslosigkeit</label>
                                             </div>
                                             <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="please_everybody">
-                                                <label class="custom-control-label" for="please_everybody">Ich versuche häufig es allen anderen recht zu machen.</label>
+                                                <input type="checkbox" class="custom-control-input" id="loss_apetite">
+                                                <label class="custom-control-label" for="loss_apetite">Appetitlosigkeit</label>
                                             </div>
                                             <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="no_self_stress">
-                                                <label class="custom-control-label" for="no_self_stress">Nichts davon</label>
+                                                <input type="checkbox" class="custom-control-input" id="binge">
+                                                <label class="custom-control-label" for="binge">Übermäßiger Appetit, z.B. auf Süßigkeiten</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="breathing">
+                                                <label class="custom-control-label" for="breathing">Atembeschwerden</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="phys_exhaustion">
+                                                <label class="custom-control-label" for="phys_exhaustion">Körperliche Erschöpfungszustände</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="psy_exhaustion">
+                                                <label class="custom-control-label" for="psy_exhaustion">Seelische Erschöpfungszustände</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="alone">
+                                                <label class="custom-control-label" for="alone">Einsamkeit</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="no_stress">
+                                                <label class="custom-control-label" for="no_stress">Nichts davon</label>
                                             </div>
                                         </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="question">
+                                            <p> 4. Hatten oder haben Sie das Gefühl von tiefer Verzweiflung in Verbindung mit Todesgedanken?</p>
+                                        </div>
+                                        <div class="answers">
+                                            <div class="custom-control custom-radio ">
+                                                <input type="radio" class="custom-control-input" id="deaththoughts_yes" name="deaththoughts">
+                                                <label class="custom-control-label" for="deaththoughts_yes">Ja</label>
+                                            </div>
+                                              
+                                              <!-- Default 2-->
+                                            <div class="custom-control custom-radio ">
+                                                <input type="radio" class="custom-control-input" id="deaththoughts_no" name="deaththoughts">
+                                                <label class="custom-control-label" for="deaththoughts_no">Nein</label>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="item">
+                                        <div class="question">
+                                            <p> 5. Welche der folgenden Aussagen treffen auf Sie zu?</p>
+                                        </div>
+                                        <div class="answers">
+                                            <!-- Default unchecked -->
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="work_overload">
+                                                <label class="custom-control-label" for="work_overload">Meine momentane berufliche Tätigkeit belastet mich sehr.</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="work_entry">
+                                                <label class="custom-control-label" for="work_entry">Der Einstieg in den Beruf ist mir sehr schwer gefallen.</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="stress_manager">
+                                                <label class="custom-control-label" for="stress_manager">Das Verhältnis zu einem meiner Vorgesetzten empfinde ich als sehr belastend.</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="stress_colleague">
+                                                <label class="custom-control-label" for="stress_colleague">Das Verhältnis zu einem oder mehrerer meiner Kollegen empfinde ich als sehr belastend.</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="financial_worries">
+                                                <label class="custom-control-label" for="financial_worries">Ich habe finanzielle Sorgen.</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="work_change">
+                                                <label class="custom-control-label" for="work_change">Aufgrund meiner (Vor-)Erkrankung wurde 
+                                                    mir gegen meinen Willen ein anderer Aufgabenbereich übertragen.</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="no_work_stress">
+                                                <label class="custom-control-label" for="no_work_stress">Nichts davon</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="question">
+                                            <p> 6. Haben Sie aufgrund einer seelischen Belastung oder Krise schon einmal 
+                                                Kontakt zu einem Arzt, einem Therapeuten oder einer anderen Person aus dem Gesundheitswesen gesucht?</p>
+                                        </div>
+                                        <div class="answers">
+                                            <div class="custom-control custom-radio ">
+                                                <input type="radio" class="custom-control-input" id="medical_contact_yes" name="medical_contact">
+                                                <label class="custom-control-label" for="medical_contact_yes">Ja</label>
+                                            </div>
+                                              
+                                              <!-- Default 2-->
+                                            <div class="custom-control custom-radio ">
+                                                <input type="radio" class="custom-control-input" id="medical_contact_no" name="medical_contact">
+                                                <label class="custom-control-label" for="medical_contact_no">Nein</label>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="item">
+                                        <div class="question">
+                                            <p> 6 a) Haben Sie das Gefühl, sich um alles selbst kümmern zu müssen, 
+                                                wenn es darum geht, für Ihre seelische Gesundheit eine angemessene 
+                                                Unterstützung, Behandlung, Begleitung, Förderung oder Versorgung zu erhalten?</p>
+                                        </div>
+                                        <div class="answers">
+                                            <div class="custom-control custom-radio ">
+                                                <input type="radio" class="custom-control-input" id="medical_alone_yes" name="medical_alone">
+                                                <label class="custom-control-label" for="medical_alone_yes">Ja</label>
+                                            </div>
+                                              
+                                              <!-- Default 2-->
+                                            <div class="custom-control custom-radio ">
+                                                <input type="radio" class="custom-control-input" id="medical_alone_no" name="medical_alone">
+                                                <label class="custom-control-label" for="medical_alone_no">Nein</label>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="item">
+                                        <div class="question">
+                                            <p> 7. Fürchten Sie sich davor, aufgrund Ihrer Empfindungen oder 
+                                                aufgrund Ihrer Erkrankung von Menschen in Ihrem beruflichen oder privaten Umfeld abgestempelt zu werden? </p>
+                                        </div>
+                                        <div class="answers">
+                                            <div class="custom-control custom-radio ">
+                                                <input type="radio" class="custom-control-input" id="stigma_yes" name="stigma">
+                                                <label class="custom-control-label" for="stigma_yes">Ja</label>
+                                            </div>
+                                              
+                                              <!-- Default 2-->
+                                            <div class="custom-control custom-radio ">
+                                                <input type="radio" class="custom-control-input" id="stigma_no" name="stigma">
+                                                <label class="custom-control-label" for="stigma_no">Nein</label>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="item">
+                                        <div class="question">
+                                            <p> 8. Welche der folgenden Aussagen treffen auf Sie zu?</p>
+                                        </div>
+                                            <div class="answers">
+                                                <!-- Default unchecked -->
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="fairness">
+                                                    <label class="custom-control-label" for="fairness">Ich habe einen ausgeprägten Gerechtigkeitssinn.</label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="selfesteem">
+                                                    <label class="custom-control-label" for="selfesteem">Ich habe häufig ein schlechtes Bild von mir selbst.</label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="self_asurness">
+                                                    <label class="custom-control-label" for="self_asurness">Ich habe wenig Vertrauen in meine eigenen Fähigkeiten.</label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="ambitious">
+                                                    <label class="custom-control-label" for="ambitious">Ich bin sehr ehrgeizig.</label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="please_everybody">
+                                                    <label class="custom-control-label" for="please_everybody">Ich versuche häufig es allen anderen recht zu machen.</label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="no_self_stress">
+                                                    <label class="custom-control-label" for="no_self_stress">Nichts davon</label>
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <!-- Controls -->
+                                    <a class="prev_ctl carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                                        <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="next_ctl carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                                        <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
                                 </div>
                             </div>
                             <div class="row">
